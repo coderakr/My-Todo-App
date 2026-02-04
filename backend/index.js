@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 4000;
 // middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://my-todo-app-e4j3.onrender.com",
     credentials: true,
   }),
 );
@@ -32,7 +32,9 @@ const startServer = async () => {
   await connectDB();
 
   app.listen(PORT, () => {
-    console.log(`app is listening on http://localhost:${PORT}`);
+    console.log(
+      `app is listening on https://my-todo-app-e4j3.onrender.com:${PORT}`,
+    );
   });
 };
 

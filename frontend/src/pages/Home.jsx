@@ -12,7 +12,7 @@ const Home = () => {
     // Fetch todos
     const fetchTodos = async () => {
         try {
-            const res = await fetch('http://localhost:3000/api/todos', {
+            const res = await fetch('https://my-todo-app-e4j3.onrender.com/api/todos', {
                 credentials: 'include',
             });
             if (!res.ok) throw new Error('Failed to fetch todos');
@@ -35,7 +35,7 @@ const Home = () => {
         if (!newTodo.title.trim()) return;
 
         try {
-            const res = await fetch('http://localhost:3000/api/todos', {
+            const res = await fetch('https://my-todo-app-e4j3.onrender.com/api/todos', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
@@ -53,7 +53,7 @@ const Home = () => {
     // Update todo
     const updateTodo = async (id, updates) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/todos/${id}`, {
+            const res = await fetch(`https://my-todo-app-e4j3.onrender.com/api/todos/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 credentials: 'include',
@@ -73,7 +73,7 @@ const Home = () => {
         if (!confirm('Are you sure you want to delete this todo?')) return;
 
         try {
-            const res = await fetch(`http://localhost:3000/api/todos/${id}`, {
+            const res = await fetch(`https://my-todo-app-e4j3.onrender.com/api/todos/${id}`, {
                 method: 'DELETE',
                 credentials: 'include',
             });
@@ -87,7 +87,7 @@ const Home = () => {
     // Toggle completion
     const toggleCompleted = async (id) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/todos/${id}/toggle`, {
+            const res = await fetch(`https://my-todo-app-e4j3.onrender.com/api/todos/${id}/toggle`, {
                 method: 'PATCH',
                 credentials: 'include',
             });
