@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 4000;
 // middleware
 app.use(
   cors({
-    origin: "https://my-todo-app-e4j3.onrender.com",
+    origin: "https://my-todo-app-frontend-mebf.onrender.com/",
     credentials: true,
   }),
 );
